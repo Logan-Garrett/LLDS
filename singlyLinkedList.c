@@ -6,9 +6,21 @@ struct Node {
     struct Node *nextNode;
 };
 
-void insertNode(struct Node **head, int data) {
+void insertNode(struct Node** head, int nodeData) {
+    // Allocate Memory
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-}
+
+    // Give the Node data and point to the previous head as next
+    // Meaning this inserts on the front.
+    newNode->data = nodeData;
+    newNode->nextNode = *head;
+
+    // Sets this Node as the new Head Node at the front.
+    *head = newNode;
+
+    // Print to show data being added.
+    printf("%d\n", newNode->data);
+    }
 
 void printNodes(struct Node* cursor) {
     while(cursor != NULL) {
@@ -35,10 +47,20 @@ int main() {
     one->nextNode=two;
     two->nextNode=three;
 
+    // Line Break 
+    printf("|----Testing Manuel Insert----|\n");
+
     // Print the List of Nodes
     printNodes(head);
 
+    // Line Break 
+    printf("|----Testing Insert Function----|\n");
+
+    // Testing insertNode
+    insertNode(&head, 0);
+
     // Test to make sure everything is running
-    printf("Hello World!");
+    // printf("Hello World!");
+    // Return needed
     return 0;
 }
