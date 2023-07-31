@@ -10,6 +10,13 @@ void insertNode(struct Node **head, int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
 }
 
+void printNodes(struct Node* cursor) {
+    while(cursor != NULL) {
+        printf("%d\n", cursor->data);
+        cursor=cursor->nextNode;
+    }
+};
+
 int main() {
     // Memory Allocation
     struct Node* head = (struct Node*)malloc(sizeof(struct Node));
@@ -28,6 +35,10 @@ int main() {
     one->nextNode=two;
     two->nextNode=three;
 
+    // Print the List of Nodes
+    printNodes(head);
+
+    // Test to make sure everything is running
     printf("Hello World!");
     return 0;
 }
