@@ -33,12 +33,12 @@ void insertNodeAtEnd(struct Node** head, int nodeData) {
     // Store Head Location
     struct Node* temp = *head;
 
-    // Asset New Node Next 
+    // Assert New Node Next 
     newNode->nextNode = NULL;
 
     // Check if LL is empty and if so make newNode Head.
     if (*head == NULL) {
-        *head == newNode;
+        *head = newNode;
         return;
     }
 
@@ -54,11 +54,27 @@ void insertNodeAtEnd(struct Node** head, int nodeData) {
     // printf("%d\n", newNode->data);
     }
 
-void printNodes(struct Node* cursor) {
-    while(cursor != NULL) {
-        printf("%d", cursor->data);
-        cursor = cursor->nextNode;
-        if (cursor != NULL) {
+void deleteAllNodes(struct Node** head) {
+    struct Node* temp = *head;
+    struct Node* nextNode;
+    
+    while (temp != NULL) {
+        nextNode = temp->nextNode;
+        free(temp);
+        temp = nextNode;
+    }
+
+    *head = NULL;
+
+    printf("Cleared Node List.\n");
+}
+
+void printNodes(struct Node** cursor) {
+    struct Node* tempCursor = *cursor;
+    while (tempCursor != NULL) {
+        printf("%d", tempCursor->data);
+        tempCursor = tempCursor->nextNode;
+        if (tempCursor != NULL) {
             printf(" -> ");
         }
     }
@@ -78,7 +94,10 @@ int main() {
     insertNodeAtFront(&head, 3);
 
     // Print Insert at Front Nodes
-    printNodes(head);
+    printNodes(&head);
+
+    // Clear Node List
+    deleteAllNodes(&head);
 
     // Testing insertNodeAtEnd
     insertNodeAtEnd(&head, 10);
@@ -87,7 +106,7 @@ int main() {
     insertNodeAtEnd(&head, 13);
 
     // Print the List of Nodes
-    printNodes(head);
+    printNodes(&head);
 
     // Return
     return 0;
