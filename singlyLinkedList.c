@@ -25,7 +25,7 @@ void insertNode(struct Node** head, int nodeData) {
 void printNodes(struct Node* cursor) {
     while(cursor != NULL) {
         printf("%d\n", cursor->data);
-        cursor=cursor->nextNode;
+        cursor = cursor->nextNode;
     }
 };
 
