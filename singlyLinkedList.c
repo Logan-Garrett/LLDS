@@ -53,8 +53,8 @@ void insertNodeAtEnd(struct Node** head, int nodeData) {
     // printf("%d\n", newNode->data);
     }
 
-void deleteNodes(struct Node** head) {
-    struct Node* temp = *head;
+void deleteNodes(struct Node** cursor) {
+    struct Node* temp = *cursor;
     struct Node* nextNode;
     
     while (temp != NULL) {
@@ -63,13 +63,23 @@ void deleteNodes(struct Node** head) {
         temp = nextNode;
     }
 
-    *head = NULL;
+    *cursor = NULL;
 
     printf("Cleared Node List.\n");
 }
 
-void deleteNode(struct Node** head, int node) {
-    // Not Implemented.
+void deleteNode(struct Node** cursor, int node) {
+    struct Node* temp = *cursor;
+    struct Node* nextNode;
+
+    while (temp != NULL) {
+        nextNode = temp->nextNode;
+        if (temp->data == node) {
+            printf("Found It!!!!");
+            free(temp);
+        }
+        temp = nextNode;
+    }
 };
 
 void printNodes(struct Node** cursor) {
@@ -110,6 +120,12 @@ int main() {
     insertNodeAtEnd(&head, 11);
     insertNodeAtEnd(&head, 12);
     insertNodeAtEnd(&head, 13);
+
+    // Print the List of Nodes
+    printNodes(&head);
+
+    // Delete Node 
+    deleteNode(&head, 12);
 
     // Print the List of Nodes
     printNodes(&head);
