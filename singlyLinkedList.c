@@ -18,49 +18,37 @@ void insertNode(struct Node** head, int nodeData) {
     // Sets this Node as the new Head Node at the front.
     *head = newNode;
 
-    // Print to show data being added.
-    printf("%d\n", newNode->data);
+    // DEBUG
+    // Print to show data being added. 
+    // printf("%d\n", newNode->data);
     }
 
 void printNodes(struct Node* cursor) {
     while(cursor != NULL) {
-        printf("%d\n", cursor->data);
+        printf("%d", cursor->data);
         cursor = cursor->nextNode;
+        if (cursor != NULL) {
+            printf(" -> ");
+        }
     }
 };
 
 int main() {
-    // Memory Allocation
-    struct Node* head = (struct Node*)malloc(sizeof(struct Node));
-    struct Node* one = (struct Node*)malloc(sizeof(struct Node));
-    struct Node* two = (struct Node*)malloc(sizeof(struct Node));
-    struct Node* three = (struct Node*)malloc(sizeof(struct Node));
-
-    // Giving Nodes data
-    head->data=0;
-    one->data=1;
-    two->data=2;
-    three->data=3;
-
-    // Pointing Nodes to next
-    head->nextNode=one;
-    one->nextNode=two;
-    two->nextNode=three;
+    // TODO: CHANGE TO IF NULL IN INSERT MAYBE?
+    struct Node* head = NULL;
 
     // Line Break 
-    printf("|----Testing Manuel Insert----|\n");
-
-    // Print the List of Nodes
-    printNodes(head);
-
-    // Line Break 
-    printf("|----Testing Insert Function----|\n");
+    printf("|----Testing----|\n");
 
     // Testing insertNode
     insertNode(&head, 0);
+    insertNode(&head, 1);
+    insertNode(&head, 2);
+    insertNode(&head, 3);
 
-    // Test to make sure everything is running
-    // printf("Hello World!");
+        // Print the List of Nodes
+    printNodes(head);
+
     // Return needed
     return 0;
 }
