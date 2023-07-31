@@ -26,13 +26,11 @@ void insertNodeAtFront(struct Node** head, int nodeData) {
 void insertNodeAtEnd(struct Node** head, int nodeData) {
     // Allocate Memory
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-
-    // Assert New Node Data
-    newNode->data = nodeData;
-    
     // Store Head Location
     struct Node* temp = *head;
 
+    // Assert New Node Data
+    newNode->data = nodeData;
     // Assert New Node Next 
     newNode->nextNode = NULL;
 
