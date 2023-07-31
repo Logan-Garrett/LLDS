@@ -6,7 +6,7 @@ struct Node {
     struct Node *nextNode;
 };
 
-void insertNode(struct Node** head, int nodeData) {
+void insertNodeAtFront(struct Node** head, int nodeData) {
     // Allocate Memory
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
 
@@ -23,6 +23,37 @@ void insertNode(struct Node** head, int nodeData) {
     // printf("%d\n", newNode->data);
     }
 
+void insertNodeAtEnd(struct Node** head, int nodeData) {
+    // Allocate Memory
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+
+    // Assert New Node Data
+    newNode->data = nodeData;
+    
+    // Store Head Location
+    struct Node* temp = *head;
+
+    // Asset New Node Next 
+    newNode->nextNode = NULL;
+
+    // Check if LL is empty and if so make newNode Head.
+    if (*head == NULL) {
+        *head == newNode;
+        return;
+    }
+
+    // Go to Last Node
+    while (temp->nextNode != NULL) {
+        temp = temp->nextNode;
+    }
+    // Change temp to point to newNode
+    temp->nextNode = newNode;
+
+    // DEBUG
+    // Print to show data being added. 
+    // printf("%d\n", newNode->data);
+    }
+
 void printNodes(struct Node* cursor) {
     while(cursor != NULL) {
         printf("%d", cursor->data);
@@ -31,24 +62,33 @@ void printNodes(struct Node* cursor) {
             printf(" -> ");
         }
     }
+    printf("\n");
 };
 
 int main() {
-    // TODO: CHANGE TO IF NULL IN INSERT MAYBE?
     struct Node* head = NULL;
 
     // Line Break 
     printf("|----Testing----|\n");
 
-    // Testing insertNode
-    insertNode(&head, 0);
-    insertNode(&head, 1);
-    insertNode(&head, 2);
-    insertNode(&head, 3);
+    // Testing insertNodeAtFront
+    insertNodeAtFront(&head, 0);
+    insertNodeAtFront(&head, 1);
+    insertNodeAtFront(&head, 2);
+    insertNodeAtFront(&head, 3);
 
-        // Print the List of Nodes
+    // Print Insert at Front Nodes
     printNodes(head);
 
-    // Return needed
+    // Testing insertNodeAtEnd
+    insertNodeAtEnd(&head, 10);
+    insertNodeAtEnd(&head, 11);
+    insertNodeAtEnd(&head, 12);
+    insertNodeAtEnd(&head, 13);
+
+    // Print the List of Nodes
+    printNodes(head);
+
+    // Return
     return 0;
 }
