@@ -68,17 +68,29 @@ void deleteNodes(struct Node** cursor) {
     printf("Cleared Node List.\n");
 }
 
+// TODO: Change to delete based on Data and not Location.
 void deleteNode(struct Node** cursor, int node) {
-    struct Node* temp = *cursor;
-    struct Node* nextNode;
+    struct Node* previous = *cursor;
+    struct Node* current = *cursor;
 
-    while (temp != NULL) {
-        nextNode = temp->nextNode;
-        if (temp->data == node) {
-            printf("Found It!!!!");
-            free(temp);
+    if (*cursor == NULL) {
+        printf("List is Empty.");
+    }
+    else if (node == 1) {
+        *cursor = current->nextNode;
+        free(current);
+        current = NULL;
+    }
+    else {
+        while (node != 1) {
+            previous = current;
+            current = current->nextNode;
+            node--;
         }
-        temp = nextNode;
+
+        previous->nextNode = current->nextNode;
+        free(current);
+        current = NULL;
     }
 };
 
@@ -125,7 +137,7 @@ int main() {
     printNodes(&head);
 
     // Delete Node 
-    deleteNode(&head, 12);
+    deleteNode(&head, 2);
 
     // Print the List of Nodes
     printNodes(&head);
