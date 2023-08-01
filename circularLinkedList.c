@@ -13,6 +13,9 @@ int lengthOfNodeList(struct Node** head) {
     while (cursor != NULL) {
         count++;
         cursor=cursor->nextNode;
+        if (cursor == *head) {
+            break;
+        }
     }
 
     return count;    
@@ -28,21 +31,31 @@ void insertNodeAtFront(struct Node** head, int data) {
     int length = lengthOfNodeList(&cursor);
 
     if (*head != NULL && length > 1) {
-        while (cursor->nextNode != *head && cursor->nextNode != NULL) {
-            cursor = cursor->nextNode;
+        while (cursor->nextNode != *head &&  cursor->nextNode != NULL) {
+            if (cursor->nextNode != NULL) {
+                cursor = cursor->nextNode;
+            } else {
+                break;
+            }
         }
+        cursor->nextNode = newNode;
     }
-
+    
     *head = newNode;
 }
 
 void printNodeList(struct Node** cursor) {
     struct Node* tempCursor = *cursor;
 
-    while (tempCursor != NULL) {
+    int listLength = lengthOfNodeList(&tempCursor);
+
+    int length = 0;
+
+    while (tempCursor != NULL && listLength >= length) {
         printf("%d", tempCursor->data);
         tempCursor = tempCursor->nextNode;
-        if (tempCursor != NULL) {
+        length++;
+        if (tempCursor != NULL && listLength >= length) {
             printf(" -> ");
         }
     }
@@ -60,10 +73,10 @@ int main() {
     insertNodeAtFront(&head, 4);
 
     // Print count
-    printf("%d", lengthOfNodeList(&head));
+    printf("Length of the list: %d\n", lengthOfNodeList(&head)); //Broken
 
     // Print Node List
-    // printNodeList(&head); //Broken
+    printNodeList(&head); //Broken
 
     return 0;
 }
