@@ -30,8 +30,8 @@ void insertNodeAtFront(struct Node** head, int data) {
 
     int length = lengthOfNodeList(&cursor);
 
-    if (*head != NULL) {
-        while (cursor->nextNode != *head &&  cursor->nextNode != NULL) {
+    if (cursor != NULL) {
+        while (cursor->nextNode != *head && cursor->nextNode != NULL) {
             cursor = cursor->nextNode;
         }
         cursor->nextNode = newNode;
@@ -99,6 +99,6 @@ int main() {
 
     // Print Count after delete.
     printf("Length of the list: %d\n", lengthOfNodeList(&head));
-    
+
     return 0;
 }
