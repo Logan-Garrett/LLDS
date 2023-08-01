@@ -27,11 +27,26 @@ void insertNodeAtFront(struct Node** head, int data) {
     newNode->data=data;
     newNode->nextNode=*head;
 
-    if (*head == NULL) {
+    if (newNode->nextNode == NULL) {
         printf("I am NULL");
+        newNode->nextNode = *head; // Issue here assigning it to start instead of endNode.
     }
 
     *head = newNode;
+}
+
+void printNodeList(struct Node** cursor) {
+    struct Node* tempCursor = *cursor;
+
+    while (tempCursor != NULL) {
+        printf("%d", tempCursor->data);
+        tempCursor = tempCursor->nextNode;
+        if (tempCursor != NULL) {
+            printf(" -> ");
+        }
+    }
+
+    printf("\n");
 }
 
 int main() {
@@ -39,8 +54,13 @@ int main() {
     
     // Insert At The Front of Circular Linked List.
     insertNodeAtFront(&head, 0);
+    insertNodeAtFront(&head, 1);
+    insertNodeAtFront(&head, 3);
 
     lengthOfNodeList(&head);
+
+    // Print Node List
+    printNodeList(&head);
 
     return 0;
 }
