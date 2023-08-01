@@ -30,7 +30,7 @@ void insertNodeAtFront(struct Node** head, int data) {
 
     int length = lengthOfNodeList(&cursor);
 
-    if (*head != NULL && length > 1) {
+    if (*head != NULL) {
         while (cursor->nextNode != *head &&  cursor->nextNode != NULL) {
             cursor = cursor->nextNode;
         }
