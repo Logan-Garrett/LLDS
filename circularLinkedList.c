@@ -40,6 +40,24 @@ void insertNodeAtFront(struct Node** head, int data) {
     *head = newNode;
 }
 
+void deleteNodelist(struct Node** cursor) {
+    struct Node* temp = *cursor;
+    struct Node* nextNode;
+
+    while (temp != NULL) {
+        if (temp->nextNode == *cursor) {
+            temp->nextNode = NULL;
+        }
+        nextNode = temp->nextNode;
+        free(temp);
+        temp=nextNode;
+    }
+
+    *cursor = NULL;
+
+    printf("Cleared Node List.\n");
+}
+
 void printNodeList(struct Node** cursor) {
     struct Node* tempCursor = *cursor;
 
@@ -71,10 +89,16 @@ int main() {
     insertNodeAtFront(&head, 9);
 
     // Print count
-    printf("Length of the list: %d\n", lengthOfNodeList(&head)); //Broken
+    printf("Length of the list: %d\n", lengthOfNodeList(&head));
 
     // Print Node List
-    printNodeList(&head); //Broken
+    printNodeList(&head);
 
+    // Clear Node List
+    deleteNodelist(&head);
+
+    // Print Count after delete.
+    printf("Length of the list: %d\n", lengthOfNodeList(&head));
+    
     return 0;
 }
