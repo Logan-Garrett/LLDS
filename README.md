@@ -17,5 +17,13 @@ Linked List Data Structure Practice
     - Delete Specifc Node (Working On).
     - Print Node List (Done).
     - Reverse Node List (Working On).
+    - Node List Length (Working On).
   - Circular Linked List
-    - Insert Node At Front (Working On).
+    - Insert Node At Front (Done).
+    - Delete All Nodes (Done).
+    - Print Node List (Done).
+    - Node List Length (Done).
+  - Doubly Linked List
+    - NULL
+  - Circular Doubly Linked List
+    - NULL
