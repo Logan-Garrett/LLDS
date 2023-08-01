@@ -3,9 +3,9 @@ Linked List Data Structure Practice
 
 ## Types
 1. Singly Linked List
-2. Doubly Linked Lists
-3. Circular Linked Lists
-4. Circular Doubly Linked Lists
+2. Doubly Linked List
+3. Circular Linked List
+4. Circular Doubly Linked List
 
 ## Languages Practiced 
 - C (Still Working On)
@@ -17,3 +17,5 @@ Linked List Data Structure Practice
     - Delete Specifc Node (Working On).
     - Print Node List (Done).
     - Reverse Node List (Working On).
+  - Circular Linked List
+    - Insert Node At Front (Working On).
