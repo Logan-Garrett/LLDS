@@ -15,24 +15,38 @@ int lengthOfNodeList(struct Node** head) {
         cursor=cursor->nextNode;
     }
 
-    printf("\nThe Length of the Node List: ");
-    printf("%d", count);
     return count;    
 }
 
 void insertNodeAtFront(struct Node** head, int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* cursor = *head;
 
-    // Assign info to the Node Struct.
-    newNode->data=data;
-    newNode->nextNode=*head;
+    newNode->data = data;
+    newNode->nextNode = *head;
 
-    if (newNode->nextNode == NULL) {
-        printf("I am NULL");
-        newNode->nextNode = *head; // Issue here assigning it to start instead of endNode.
+    int length = lengthOfNodeList(&cursor);
+    if (*head != NULL && length > 1) {
+        while (cursor->nextNode != *head) {
+            if (cursor->nextNode != NULL) {
+                cursor = cursor->nextNode;
+            } else {
+                break;
+            }
+        }
+        cursor->nextNode = newNode;
     }
-
+    
     *head = newNode;
+    printf("%d", newNode->data);
+    printf(" -> ");
+    if (cursor != NULL) {
+        printf("%d", cursor->data);
+    }
+    else {
+        printf("Null");
+    }
+    printf("\n");
 }
 
 void printNodeList(struct Node** cursor) {
@@ -53,14 +67,15 @@ int main() {
     struct Node* head = NULL;
     
     // Insert At The Front of Circular Linked List.
-    insertNodeAtFront(&head, 0);
     insertNodeAtFront(&head, 1);
+    insertNodeAtFront(&head, 2);
     insertNodeAtFront(&head, 3);
 
-    lengthOfNodeList(&head);
+    // Print count
+    //printf("%d", lengthOfNodeList(&head)); //Broken
 
     // Print Node List
-    printNodeList(&head);
+    // printNodeList(&head); //Broken
 
     return 0;
 }
