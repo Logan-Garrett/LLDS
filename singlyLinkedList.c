@@ -25,14 +25,11 @@ void insertNodeAtFront(struct Node** head, int nodeData) {
     }
 
 void insertNodeAtEnd(struct Node** head, int nodeData) {
-    // Allocate Memory
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-    // Store Head Location
     struct Node* temp = *head;
 
-    // Assert New Node Data
+    // Assert New Node Data and Next Node
     newNode->data = nodeData;
-    // Assert New Node Next 
     newNode->nextNode = NULL;
 
     // Check if LL is empty and if so make newNode Head.
@@ -65,11 +62,9 @@ void deleteNodes(struct Node** cursor) {
     }
 
     *cursor = NULL;
-
     printf("Cleared Node List.\n");
 }
 
-// TODO: Change to delete based on Data and not Location.
 void deleteNode(struct Node** cursor, int node) {
     struct Node* previous = *cursor;
     struct Node* current = *cursor;
@@ -88,7 +83,6 @@ void deleteNode(struct Node** cursor, int node) {
             current = current->nextNode;
             node--;
         }
-
         previous->nextNode = current->nextNode;
         free(current);
         current = NULL;
@@ -101,7 +95,6 @@ void printNodes(struct Node** cursor) {
     while (tempCursor != NULL) {
         printf("%d", tempCursor->data);
         tempCursor = tempCursor->nextNode;
-
         if (tempCursor != NULL) {
             printf(" -> ");
         }
@@ -119,6 +112,7 @@ int checkForNode(struct Node** cursor, int data) {
         }
         tempCursor = tempCursor->nextNode;
     }
+    
     if (isFound) {
         printf("Node %d Found.\n", data);
     } else {

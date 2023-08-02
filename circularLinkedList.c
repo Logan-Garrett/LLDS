@@ -54,7 +54,6 @@ void deleteNodelist(struct Node** cursor) {
     }
 
     *cursor = NULL;
-
     printf("Cleared Node List.\n");
 }
 
@@ -62,7 +61,6 @@ void printNodeList(struct Node** cursor) {
     struct Node* tempCursor = *cursor;
 
     int listLength = lengthOfNodeList(&tempCursor);
-
     int length = 0;
 
     while (tempCursor != NULL && listLength >= length) {

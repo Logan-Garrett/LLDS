@@ -10,11 +10,12 @@ struct Node {
 int nodeListLength(struct Node** cursor) {
     struct Node* tempCursor = *cursor;
     int count = 0;
-    
+
     while (tempCursor != NULL) {
         count++;
         tempCursor = tempCursor->nextNode;
     }
+    
     return count;
 }
 
@@ -42,7 +43,9 @@ void printNodeList(struct Node** cursor) {
         if (tempCursor->prevNode != NULL) {
             printf("\nPrev Node: %d", tempCursor->prevNode->data);
         }
+
         printf("\nNode Data: %d", tempCursor->data);
+
         if (tempCursor->nextNode != NULL) {
             printf("\nNext Node: %d", tempCursor->nextNode->data);
         }
