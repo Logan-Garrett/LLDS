@@ -21,13 +21,12 @@ void insertNodeAtFront(struct Node** head, int data) {
         temp->prevNode = newNode;
     }
 
-    while (cursor != NULL) {
-        if (cursor->nextNode == *head) {
-            // Data assingment Seems off in terms of making it Circular.
-            cursor->nextNode = newNode;
-            newNode->prevNode = cursor->nextNode;
+    if (cursor != NULL) {
+        while (cursor->nextNode != *head && cursor->nextNode != NULL) {
+            cursor = cursor->nextNode;
         }
-        cursor = cursor->nextNode;
+        newNode->prevNode = cursor;
+        cursor->nextNode = newNode;
     }
 
     *head = newNode;
