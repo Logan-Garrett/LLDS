@@ -36,9 +36,12 @@ int nodeListLength(struct Node** cursor) {
     struct Node* tempCursor = *cursor;
     int length = 0;
 
-    while (tempCursor != NULL && tempCursor->nextNode != *cursor) {
+    while (tempCursor != NULL) {
         length++;
         tempCursor = tempCursor->nextNode;
+        if (tempCursor == *cursor) {
+            break;
+        }
     }
 
     return length;
