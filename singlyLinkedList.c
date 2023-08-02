@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 struct Node {
     int data;
@@ -105,8 +106,24 @@ void printNodes(struct Node** cursor) {
             printf(" -> ");
         }
     }
-
     printf("\n");
+}
+
+int checkForNode(struct Node** cursor, int data) {
+    struct Node* tempCursor = *cursor;
+    bool isFound = false;
+
+    while (tempCursor != NULL) {
+        if (tempCursor->data == data) {
+            isFound = true;
+        }
+        tempCursor = tempCursor->nextNode;
+    }
+    if (isFound) {
+        printf("Node %d Found.\n", data);
+    } else {
+        printf("Node %d not found.\n", data);
+    }
 }
 
 int main() {
@@ -135,6 +152,12 @@ int main() {
 
     // Print the List of Nodes
     printNodes(&head);
+
+    // Does Exist
+    checkForNode(&head, 12);
+    
+    // Does Not Exist
+    checkForNode(&head, 26);
 
     // Delete Node 
     deleteNode(&head, 2);
