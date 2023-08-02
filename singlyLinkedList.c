@@ -92,7 +92,7 @@ void deleteNode(struct Node** cursor, int node) {
         free(current);
         current = NULL;
     }
-};
+}
 
 void printNodes(struct Node** cursor) {
     struct Node* tempCursor = *cursor;
@@ -107,7 +107,7 @@ void printNodes(struct Node** cursor) {
     }
 
     printf("\n");
-};
+}
 
 int main() {
     struct Node* head = NULL;
