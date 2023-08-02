@@ -10,6 +10,7 @@ struct Node {
 int nodeListLength(struct Node** cursor) {
     struct Node* tempCursor = *cursor;
     int count = 0;
+    
     while (tempCursor != NULL) {
         count++;
         tempCursor = tempCursor->nextNode;
@@ -18,7 +19,6 @@ int nodeListLength(struct Node** cursor) {
 }
 
 void insertNode(struct Node** head, int data) {
-    printf("\nInserted Node");
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     struct Node* temp = *head;
 
@@ -26,18 +26,28 @@ void insertNode(struct Node** head, int data) {
     newNode->nextNode=*head;
 
     int length = nodeListLength(&temp);
-    printf("\nLength From insert: %d", length);
 
     if (length > 0) {
         temp->prevNode = newNode;
-        printf("\nPreviouse Node %d", temp->prevNode->data);
     }
 
     *head = newNode;
 }
 
 void printNodeList(struct Node** cursor) {
-    // Not Implemented.
+    struct Node* tempCursor = *cursor;
+
+    while (tempCursor != NULL) {
+        printf("\n------Node Info------");
+        if (tempCursor->prevNode != NULL) {
+            printf("\nPrev Node: %d", tempCursor->prevNode->data);
+        }
+        printf("\nNode Data: %d", tempCursor->data);
+        if (tempCursor->nextNode != NULL) {
+            printf("\nNext Node: %d", tempCursor->nextNode->data);
+        }
+        tempCursor = tempCursor->nextNode;
+    }
 }
 
 int main() {
@@ -48,6 +58,8 @@ int main() {
     insertNode(&head, 2);
 
     printf("\nThe Node List Length is: %d", nodeListLength(&head));
+
+    printNodeList(&head);
 
     return 0;
 }
