@@ -15,7 +15,7 @@ int nodeListLength(struct Node** cursor) {
         count++;
         tempCursor = tempCursor->nextNode;
     }
-    
+
     return count;
 }
 
@@ -26,9 +26,9 @@ void insertNode(struct Node** head, int data) {
     newNode->data=data;
     newNode->nextNode=*head;
 
-    int length = nodeListLength(&temp);
+    newNode->prevNode=NULL;
 
-    if (length > 0) {
+    if (temp != NULL) {
         temp->prevNode = newNode;
     }
 
