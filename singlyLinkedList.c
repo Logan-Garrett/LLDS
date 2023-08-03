@@ -18,6 +18,7 @@ void insertNodeAtFront(struct Node** head, int nodeData) {
 
     // Sets this Node as the new Head Node at the front.
     *head = newNode;
+    free(newNode);
 
     // DEBUG
     // Print to show data being added. 
@@ -45,7 +46,7 @@ void insertNodeAtEnd(struct Node** head, int nodeData) {
 
     // Change temp to point to newNode
     temp->nextNode = newNode;
-
+    free(newNode);
     // DEBUG
     // Print to show data being added. 
     // printf("%d\n", newNode->data);
@@ -162,3 +163,5 @@ int main() {
     // Return
     return 0;
 }
+
+// HAS memory leak

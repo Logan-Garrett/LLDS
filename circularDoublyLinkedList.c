@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <mcheck.h>
 
 struct Node {
     int data;
@@ -8,7 +9,7 @@ struct Node {
 };
 
 void insertNodeAtFront(struct Node** head, int data) {
-    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node)); 
     struct Node* temp = *head;
     struct Node* cursor = *head;
 
@@ -30,6 +31,7 @@ void insertNodeAtFront(struct Node** head, int data) {
     }
 
     *head = newNode;
+    free(newNode);
 }  
 
 int nodeListLength(struct Node** cursor) {

@@ -33,6 +33,7 @@ void insertNode(struct Node** head, int data) {
     }
 
     *head = newNode;
+    free(newNode);
 }
 
 void printNodeList(struct Node** cursor) {

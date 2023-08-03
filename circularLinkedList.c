@@ -38,6 +38,7 @@ void insertNodeAtFront(struct Node** head, int data) {
     }
     
     *head = newNode;
+    free(newNode);
 }
 
 void deleteNodelist(struct Node** cursor) {
@@ -100,3 +101,5 @@ int main() {
 
     return 0;
 }
+
+// HAS A LOT OF MEMORY LEAKS
