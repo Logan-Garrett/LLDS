@@ -18,6 +18,7 @@ void insertNodeAtFront(struct Node** head, int nodeData) {
 
     // Sets this Node as the new Head Node at the front.
     *head = newNode;
+
     free(newNode);
 
     // DEBUG
@@ -46,7 +47,9 @@ void insertNodeAtEnd(struct Node** head, int nodeData) {
 
     // Change temp to point to newNode
     temp->nextNode = newNode;
+
     free(newNode);
+    free(temp);
     // DEBUG
     // Print to show data being added. 
     // printf("%d\n", newNode->data);
@@ -63,6 +66,10 @@ void deleteNodes(struct Node** cursor) {
     }
 
     *cursor = NULL;
+
+    free(temp);
+    free(nextNode);
+
     printf("Cleared Node List.\n");
 }
 
@@ -88,6 +95,9 @@ void deleteNode(struct Node** cursor, int node) {
         free(current);
         current = NULL;
     }
+
+    free(previous);
+    free(current);
 }
 
 void printNodes(struct Node** cursor) {
@@ -101,6 +111,7 @@ void printNodes(struct Node** cursor) {
         }
     }
     printf("\n");
+    free(tempCursor);
 }
 
 int checkForNode(struct Node** cursor, int data) {
@@ -119,6 +130,8 @@ int checkForNode(struct Node** cursor, int data) {
     } else {
         printf("Node %d not found.\n", data);
     }
+
+    free(tempCursor);
 }
 
 int main() {
@@ -135,7 +148,7 @@ int main() {
 
     // Print Insert at Front Nodes
     printNodes(&head);
-
+    
     // Clear Node List
     deleteNodes(&head);
 
@@ -159,9 +172,7 @@ int main() {
 
     // Print the List of Nodes
     printNodes(&head);
-
+    
     // Return
     return 0;
 }
-
-// HAS memory leak

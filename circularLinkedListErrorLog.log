@@ -1,0 +1,409 @@
+==9777== Memcheck, a memory error detector
+==9777== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==9777== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==9777== Command: ./circularLinkedList
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x1091AD: lengthOfNodeList (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10922B: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10941F: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67048 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10924A: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10941F: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67048 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10925E: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10941F: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67048 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid write of size 8
+==9777==    at 0x10926F: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10941F: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67048 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x1091AD: lengthOfNodeList (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10922B: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109430: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67098 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10941F: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10941F: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10924A: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109430: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67098 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10941F: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10941F: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10925E: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109430: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67098 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10941F: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10941F: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10923E: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109430: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67098 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10941F: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10941F: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid write of size 8
+==9777==    at 0x10926F: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109430: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67048 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x1091AD: lengthOfNodeList (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10922B: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109441: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a670e8 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109430: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109430: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10924A: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109441: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a670e8 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109430: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109430: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10925E: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109441: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a670e8 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109430: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109430: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10923E: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109441: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a670e8 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109430: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109430: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid write of size 8
+==9777==    at 0x10926F: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109441: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67048 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x1091AD: lengthOfNodeList (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10922B: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109452: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67138 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109441: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109441: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10924A: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109452: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67138 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109441: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109441: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10925E: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109452: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67138 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109441: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109441: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10923E: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109452: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67138 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109441: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109441: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid write of size 8
+==9777==    at 0x10926F: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109452: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67048 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x1091AD: lengthOfNodeList (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10922B: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67188 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109452: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109452: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10924A: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67188 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109452: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109452: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10925E: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67188 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109452: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109452: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10923E: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67188 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109452: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109452: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid write of size 8
+==9777==    at 0x10926F: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67048 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x1091AD: lengthOfNodeList (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10946F: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a671d8 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+Length of the list: 6
+==9777== Invalid read of size 8
+==9777==    at 0x1091AD: lengthOfNodeList (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10934F: printNodeList (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109491: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a671d8 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 4
+==9777==    at 0x109360: printNodeList (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109491: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a671d0 is 0 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x10937C: printNodeList (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109491: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a671d8 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+9 -> 4 -> 5 -> 3 -> 2 -> 1 -> 9
+==9777== Invalid read of size 8
+==9777==    at 0x1092BE: deleteNodelist (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10949D: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a671d8 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid read of size 8
+==9777==    at 0x1092DE: deleteNodelist (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10949D: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a671d8 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid free() / delete / delete[] / realloc()
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x1092F1: deleteNodelist (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10949D: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a671d0 is 0 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x109463: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+==9777== Invalid write of size 8
+==9777==    at 0x1092D2: deleteNodelist (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10949D: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Address 0x4a67048 is 8 bytes inside a block of size 16 free'd
+==9777==    at 0x4844164: free (vg_replace_malloc.c:974)
+==9777==    by 0x109289: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==  Block was alloc'd at
+==9777==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==9777==    by 0x1091F8: insertNodeAtFront (in /home/lg4/git/LLDS/circularLinkedList)
+==9777==    by 0x10940E: main (in /home/lg4/git/LLDS/circularLinkedList)
+==9777== 
+Cleared Node List.
+Length of the list: 0
+==9777== 
+==9777== HEAP SUMMARY:
+==9777==     in use at exit: 0 bytes in 0 blocks
+==9777==   total heap usage: 7 allocs, 13 frees, 1,120 bytes allocated
+==9777== 
+==9777== All heap blocks were freed -- no leaks are possible
+==9777== 
+==9777== For lists of detected and suppressed errors, rerun with: -s
+==9777== ERROR SUMMARY: 101 errors from 32 contexts (suppressed: 0 from 0)

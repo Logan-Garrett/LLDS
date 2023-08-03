@@ -1,0 +1,384 @@
+==10241== Memcheck, a memory error detector
+==10241== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==10241== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==10241== Command: ./circularDoublyLinkedList
+==10241== 
+==10241== Invalid write of size 8
+==10241==    at 0x1091D4: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093CF: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67050 is 16 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x1091F1: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093CF: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67048 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x109205: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093CF: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67048 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid write of size 8
+==10241==    at 0x109222: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093CF: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67048 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid write of size 8
+==10241==    at 0x1091D4: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093E0: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a670b0 is 16 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093CF: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093CF: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x1091F1: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093E0: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a670a8 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093CF: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093CF: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x109205: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093E0: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a670a8 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093CF: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093CF: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x1091E5: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093E0: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a670a8 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093CF: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093CF: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid write of size 8
+==10241==    at 0x109222: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093E0: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67048 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid write of size 8
+==10241==    at 0x1091D4: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67110 is 16 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093E0: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093E0: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x1091F1: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67108 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093E0: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093E0: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x109205: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67108 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093E0: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093E0: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x1091E5: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67108 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093E0: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093E0: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid write of size 8
+==10241==    at 0x109222: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67048 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid write of size 8
+==10241==    at 0x1091D4: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67170 is 16 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x1091F1: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67168 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x109205: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67168 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x1091E5: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67168 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid write of size 8
+==10241==    at 0x109222: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67048 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x109264: nodeListLength (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x10940E: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a671c8 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+
+==10241== Invalid read of size 8
+==10241==    at 0x109264: nodeListLength (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1092B9: printNodeList (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109430: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a671c8 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+Node List length is: 5
+==10241== Invalid read of size 8
+==10241==    at 0x1092E1: printNodeList (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109430: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a671d0 is 16 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x1092EE: printNodeList (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109430: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a671d0 is 16 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 4
+==10241==    at 0x1092F2: printNodeList (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109430: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67040 is 0 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093BE: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+------Node Info------
+==10241== Invalid read of size 4
+==10241==    at 0x10930E: printNodeList (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109430: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a671c0 is 0 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+Prev Node: 0
+==10241== Invalid read of size 8
+==10241==    at 0x10932A: printNodeList (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109430: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a671c8 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 8
+==10241==    at 0x109337: printNodeList (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109430: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a671c8 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+==10241== Invalid read of size 4
+==10241==    at 0x10933B: printNodeList (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109430: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a67160 is 0 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x1093F1: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+Node Data: 9
+==10241== Invalid read of size 8
+==10241==    at 0x10935B: printNodeList (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109430: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Address 0x4a671c8 is 8 bytes inside a block of size 24 free'd
+==10241==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10241==    by 0x10923C: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==  Block was alloc'd at
+==10241==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10241==    by 0x109181: insertNodeAtFront (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241==    by 0x109402: main (in /home/lg4/git/LLDS/circularDoublyLinkedList)
+==10241== 
+Next Node: 6
+------Node Info------
+Prev Node: 9
+Node Data: 6
+Next Node: 2
+------Node Info------
+Prev Node: 6
+Node Data: 2
+Next Node: 3
+------Node Info------
+Prev Node: 2
+Node Data: 3
+Next Node: 0
+------Node Info------
+Prev Node: 3
+Node Data: 0
+Next Node: 9==10241== 
+==10241== HEAP SUMMARY:
+==10241==     in use at exit: 0 bytes in 0 blocks
+==10241==   total heap usage: 6 allocs, 6 frees, 1,144 bytes allocated
+==10241== 
+==10241== All heap blocks were freed -- no leaks are possible
+==10241== 
+==10241== For lists of detected and suppressed errors, rerun with: -s
+==10241== ERROR SUMMARY: 81 errors from 29 contexts (suppressed: 0 from 0)

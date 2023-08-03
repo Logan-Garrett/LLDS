@@ -1,0 +1,157 @@
+==10028== Memcheck, a memory error detector
+==10028== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==10028== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==10028== Command: ./doublyLinkedList
+==10028== 
+==10028== Invalid write of size 8
+==10028==    at 0x1091FC: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10931B: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Address 0x4a67050 is 16 bytes inside a block of size 24 free'd
+==10028==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10028==    by 0x109216: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10930A: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Block was alloc'd at
+==10028==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10028==    by 0x1091B9: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10930A: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028== 
+==10028== Invalid write of size 8
+==10028==    at 0x1091FC: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Address 0x4a670b0 is 16 bytes inside a block of size 24 free'd
+==10028==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10028==    by 0x109216: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10931B: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Block was alloc'd at
+==10028==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10028==    by 0x1091B9: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10931B: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028== 
+==10028== Invalid read of size 8
+==10028==    at 0x10918D: nodeListLength (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x109338: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Address 0x4a67108 is 8 bytes inside a block of size 24 free'd
+==10028==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10028==    by 0x109216: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Block was alloc'd at
+==10028==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10028==    by 0x1091B9: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028== 
+
+The Node List Length is: 3
+==10028== Invalid read of size 8
+==10028==    at 0x10924E: printNodeList (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10935A: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Address 0x4a67110 is 16 bytes inside a block of size 24 free'd
+==10028==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10028==    by 0x109216: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Block was alloc'd at
+==10028==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10028==    by 0x1091B9: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028== 
+==10028== Invalid read of size 4
+==10028==    at 0x10927B: printNodeList (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10935A: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Address 0x4a67100 is 0 bytes inside a block of size 24 free'd
+==10028==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10028==    by 0x109216: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Block was alloc'd at
+==10028==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10028==    by 0x1091B9: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028== 
+------Node Info------
+==10028== Invalid read of size 8
+==10028==    at 0x109297: printNodeList (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10935A: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Address 0x4a67108 is 8 bytes inside a block of size 24 free'd
+==10028==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10028==    by 0x109216: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Block was alloc'd at
+==10028==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10028==    by 0x1091B9: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028== 
+==10028== Invalid read of size 8
+==10028==    at 0x1092A4: printNodeList (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10935A: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Address 0x4a67108 is 8 bytes inside a block of size 24 free'd
+==10028==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10028==    by 0x109216: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Block was alloc'd at
+==10028==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10028==    by 0x1091B9: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028== 
+==10028== Invalid read of size 4
+==10028==    at 0x1092A8: printNodeList (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10935A: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Address 0x4a670a0 is 0 bytes inside a block of size 24 free'd
+==10028==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10028==    by 0x109216: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10931B: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Block was alloc'd at
+==10028==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10028==    by 0x1091B9: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10931B: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028== 
+Node Data: 2
+==10028== Invalid read of size 8
+==10028==    at 0x1092C4: printNodeList (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10935A: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Address 0x4a67108 is 8 bytes inside a block of size 24 free'd
+==10028==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10028==    by 0x109216: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Block was alloc'd at
+==10028==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10028==    by 0x1091B9: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028== 
+Next Node: 1
+==10028== Invalid read of size 8
+==10028==    at 0x10925B: printNodeList (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10935A: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Address 0x4a670b0 is 16 bytes inside a block of size 24 free'd
+==10028==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10028==    by 0x109216: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10931B: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Block was alloc'd at
+==10028==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10028==    by 0x1091B9: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10931B: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028== 
+==10028== Invalid read of size 4
+==10028==    at 0x10925F: printNodeList (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10935A: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Address 0x4a67100 is 0 bytes inside a block of size 24 free'd
+==10028==    at 0x4844164: free (vg_replace_malloc.c:974)
+==10028==    by 0x109216: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==  Block was alloc'd at
+==10028==    at 0x484178B: malloc (vg_replace_malloc.c:431)
+==10028==    by 0x1091B9: insertNode (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028==    by 0x10932C: main (in /home/lg4/git/LLDS/doublyLinkedList)
+==10028== 
+------Node Info------
+Prev Node: 2
+Node Data: 1
+Next Node: 0
+------Node Info------
+Prev Node: 1
+Node Data: 0==10028== 
+==10028== HEAP SUMMARY:
+==10028==     in use at exit: 0 bytes in 0 blocks
+==10028==   total heap usage: 4 allocs, 4 frees, 1,096 bytes allocated
+==10028== 
+==10028== All heap blocks were freed -- no leaks are possible
+==10028== 
+==10028== For lists of detected and suppressed errors, rerun with: -s
+==10028== ERROR SUMMARY: 25 errors from 11 contexts (suppressed: 0 from 0)
