@@ -49,7 +49,7 @@ void insertNodeAtEnd(struct Node** head, int nodeData) {
     temp->nextNode = newNode;
 
     free(newNode);
-    free(temp);
+
     // DEBUG
     // Print to show data being added. 
     // printf("%d\n", newNode->data);
@@ -57,7 +57,7 @@ void insertNodeAtEnd(struct Node** head, int nodeData) {
 
 void deleteNodes(struct Node** cursor) {
     struct Node* temp = *cursor;
-    struct Node* nextNode;
+    struct Node* nextNode = NULL;
     
     while (temp != NULL) {
         nextNode = temp->nextNode;
@@ -68,7 +68,6 @@ void deleteNodes(struct Node** cursor) {
     *cursor = NULL;
 
     free(temp);
-    free(nextNode);
 
     printf("Cleared Node List.\n");
 }
@@ -97,7 +96,6 @@ void deleteNode(struct Node** cursor, int node) {
     }
 
     free(previous);
-    free(current);
 }
 
 void printNodes(struct Node** cursor) {
@@ -111,7 +109,6 @@ void printNodes(struct Node** cursor) {
         }
     }
     printf("\n");
-    free(tempCursor);
 }
 
 int checkForNode(struct Node** cursor, int data) {
@@ -130,8 +127,6 @@ int checkForNode(struct Node** cursor, int data) {
     } else {
         printf("Node %d not found.\n", data);
     }
-
-    free(tempCursor);
 }
 
 int main() {
